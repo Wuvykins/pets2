@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Turn on error reporting
 ini_set('display_errors' , 1);
 error_reporting(E_ALL);
@@ -47,6 +48,26 @@ $f3->route('GET /@order', function($f3, $params) {
         default:
             $f3->error(404);
     }
+});
+
+//define a route for order
+$f3->route('GET /order', function() {
+    $view = new View;
+    echo $view->render('views/form1.html');
+});
+
+//define a route for order
+$f3->route('POST /order2', function() {
+    $_SESSION["animal"]= $_POST['animal'];
+    $view = new View;
+    echo $view->render('views/form2.html');
+});
+
+//define a route for order
+$f3->route('POST /results', function() {
+    $_SESSION["color"]= $_POST['color'];
+    $template = new Template();
+    echo $template->render('views/results.html');
 });
 
 //Run fat free

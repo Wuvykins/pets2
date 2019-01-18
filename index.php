@@ -22,7 +22,7 @@ $f3->route('GET /', function() {
 });
 
 //define an animal type route
-$f3->route('GET /@order', function($f3, $params) {
+$f3->route('GET /order', function($f3, $params) {
     //echo '<h1>My pets</h1>';
     //echo "<a href='order'>Order a pet</a>";
     //$view = new View;

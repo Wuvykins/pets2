@@ -1,0 +1,12 @@
+{
+  "name": "nalexand/328/pets2",
+  "authors": [
+    {
+      "name": "Nic Alexander",
+      "email": "nalexander5@mail.greenriver.edu"
+    }
+  ],
+  "require":{
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
